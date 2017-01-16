@@ -44,11 +44,16 @@ $('.pagination a').on('click', function (event) {
     event.preventDefault();
     var pageNumber = this.innerText;
 
+    // Change active class
+    $('.pagination a').removeClass('active');
+    $(this).addClass('active');
+
     displayStudentsForPage(pageNumber);
 });
 
-// On page load, display the first page
+// On page load, display the first page and set page 1 as active
 displayStudentsForPage(1);
+$('.pagination a:first').addClass('active');
 
 // Search
 var $search = $('<div class="student-search"></div>');
