@@ -29,10 +29,10 @@ var displayStudentsForPage = function (pageNum) {
 };
 
 // Pagination
-var $paginationDiv = $('<div class="pagination"></div>');
+var $pagination = $('<div class="pagination"></div>');
 var $paginationList = $('<ul></ul>');
-$paginationDiv.append($paginationList);
-$studentList.after($paginationDiv);
+$pagination.append($paginationList);
+$studentList.after($pagination);
 
 // Create pagination links
 for (var i = 0; i < getPageCount(studentListItems); i++) {
