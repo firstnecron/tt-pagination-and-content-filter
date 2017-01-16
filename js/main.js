@@ -49,3 +49,12 @@ $('.pagination a').on('click', function (event) {
 
 // On page load, display the first page
 displayStudentsForPage(1);
+
+// Search
+var $search = $('<div class="student-search"></div>');
+var $searchInput = $('<input placeholder="Search for students...">');
+var $searchButton = $('<button>Search</button>');
+
+// Append search HTML
+$search.append($searchInput).append($searchButton);
+$('.page-header').append($search);
